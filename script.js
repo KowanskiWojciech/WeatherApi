@@ -51,8 +51,8 @@ function taskHandler(e) {
 }
 
 function taskDone(e) {
-  const element = e.target;
-  toDoList.splice(element, 1);
+  const element = e.target.parentElement;
+  element.remove();
 }
 
 addBtn.addEventListener("click", taskHandler);
