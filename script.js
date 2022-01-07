@@ -1,5 +1,5 @@
 //https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=b8225b041c82080be7743e54e195af9a
-const cityName = document.querySelector("h1");
+const cityName = document.querySelector("h2");
 const deg = document.querySelector(".degrees");
 const clar = document.querySelector(".clarity");
 const submit = document.querySelector(".load");
