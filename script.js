@@ -11,7 +11,7 @@ async function getWeather(city) {
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=b8225b041c82080be7743e54e195af9a&units=metric`
   );
   const data = await response.json();
-  if (city === "") {
+  if (data.cod != 200) {
     return;
   }
   cityName.textContent = `${data.name}`;

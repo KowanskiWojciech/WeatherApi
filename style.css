@@ -30,7 +30,7 @@ h1{
     border: solid whitesmoke 2px;
     border-radius: 15px;
     text-align: center;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .display{
@@ -67,6 +67,14 @@ input[type=submit]{
     margin-bottom: 40px;
     opacity:1;
 }
+
+input[type=submit]:hover{
+background: lightgray;
+}
+
+input[type=submit]:active{
+    background: gray;
+    }
 
 input:focus{
     outline: none;
@@ -109,33 +117,47 @@ li{
         margin-top:30px;
         font-size: 30px;
     }
-    
     input[type=text]{
         width:340px;
         margin-top: 30px;
     }
-    
     input[type=submit]{
         margin-top:30px;
         margin-bottom: 50px;
     }
-   
     h2, li{
     margin-top: 30px;
     font-size: 50px;
     }
-    
     li{
         font-size: 25px;
     }
-    
     .done {
         font-size: 18px;
     }
 
 }
 
+@media (orientation: landscape) and (min-width: 350px){
+    body {
+        flex-direction: column;
+      }
+      h1{
+        font-size: 20px;
+    }
+    .display, .list{
+        width: 280px;
+    }
+    input[type=text]{
+        width:250px;
+    }
+}
+
 @media (orientation: landscape) and (min-width: 630px){
+    
+    body {
+        flex-direction: row;
+      }
     h1{
         font-size: 28px;
         margin-top: 10px;
@@ -148,28 +170,110 @@ li{
         margin-top:10px;
         font-size: 18px;
     }
-    
     input[type=text]{
         width:300px;
         margin-top: 20px;
     }
-    
     input[type=submit]{
         margin-top:15px;
         margin-bottom: 20px;
     }
-   
     h2, li{
     margin-top: 5px;
     font-size: 25px;
     }
-    
     li{
         font-size: 18px;
     }
-    
     .done {
         font-size: 13px;
+    }
+
+}
+
+@media (orientation: landscape) and (min-width: 896px){
+    
+    body {
+        flex-direction: row;
+      }
+    h1{
+        font-size: 45px;
+        margin-top: 40px;
+    }
+    .display, .list{
+        height: 300px;
+        width: 400px;
+    }
+    .degrees, .clarity{
+        margin-top:30px;
+        font-size: 28px;
+    }
+    input[type=text]{
+        width:350px;
+        margin-top: 40px;
+    }
+    input[type=submit]{
+        margin-top:40px;
+        margin-bottom: 40px;
+    }
+    h2, li{
+    margin-top: 20px;
+    font-size: 40px;
+    }
+    li{
+        font-size: 25px;
+    }
+    .done {
+        font-size: 18px;
+    }
+
+}
+
+@media (orientation: landscape) and (min-width: 1366px){
+    h1{
+        font-size: 55px;
+        margin-top: 40px;
+    }
+    .display, .list{
+        margin-bottom: 20px;
+        padding: 10px;
+        height: 400px;
+        width: 600px;
+    }
+
+    .display{
+        flex-direction: column;
+    }
+
+    .degrees, .clarity{
+        margin-top:50px;
+        font-size: 30px;
+    }
+
+    input[type=text]{
+        width:400px;
+        margin-top: 40px;
+    }
+
+    input[type=submit]{
+        margin: 0 auto;
+        width:150px;
+        margin-top:40px;
+        margin-bottom: 40px;
+    }
+
+    h2{
+    margin-top: 40px;
+    font-size: 70px;
+    }
+
+    li{
+        margin-top: 40px;
+        font-size: 30px;
+    }
+    .done {
+        padding: 3px;
+        font-size: 20px;
     }
 
 }
